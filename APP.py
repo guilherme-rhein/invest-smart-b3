@@ -154,9 +154,6 @@ def main():
                     subset = df_filtrado[df_filtrado["Classificação"] == classe]
                     st.subheader(f"{classe}")
                     st.dataframe(subset[["Ativo", "RSI"]].reset_index(drop=True))
-        else:
-            st.warning("⚠️ Nenhum ativo foi classificado com esse filtro.")
-
 
             # Botão para download de todos os dados filtrados
             excel_data = to_excel_download(df_filtrado)
@@ -165,7 +162,12 @@ def main():
                 data=excel_data,
                 file_name="classificacao_geral.xlsx",
                 mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-            )
+            )        
+    
+     
+        
+        else:
+            st.warning("⚠️ Nenhum ativo foi classificado com esse filtro.")
 
         st.write('----')
         
