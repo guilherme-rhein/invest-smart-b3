@@ -15,8 +15,9 @@ An interactive app built with **Streamlit** to analyze and classify B3 stocks ba
 ---
 
 ## 🎥 Demo
+![Dash_Demo](https://raw.githubusercontent.com/guilherme-rhein/invest-smart-b3/refs/heads/main/IMG/PIC1.png)
 
-
+![Dash_Demo](https://raw.githubusercontent.com/guilherme-rhein/invest-smart-b3/refs/heads/main/IMG/PIC2.png)
 
 ---
 
