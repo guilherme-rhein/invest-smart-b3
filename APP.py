@@ -27,27 +27,28 @@ def main():
 
         aba_selecionada = st.selectbox("Escolha a aba do Excel", abas_disponiveis)
 
+        # cloudscraper
         @st.cache_data
         def get_atv():
             url = "https://fundamentus.com.br/resultado.php"
-            #headers = {"User-Agent": "Mozilla/5.0"}
-            headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-                       "AppleWebKit/537.36 (KHTML, like Gecko) "
-                       "Chrome/115.0.0.0 Safari/537.36"}
-            response = requests.get(url, headers=headers)
-            
-            # Debug: TEST RESP
-            st.write("Status Code da Requisição:", response.status_code)
-            st.code(response.text[:1000], language='html')
-
-            df_atv = pd.read_html(StringIO(response.text), decimal=",", thousands=".")[0]
-
+            scraper = cloudscraper.create_scraper()
+            response = scraper.get(url)
+        
+            try:
+                df_atv = pd.read_html(StringIO(response.text), decimal=",", thousands=".")[0]
+            except ValueError:
+                st.error("❌ Nenhuma tabela foi encontrada. O site pode estar bloqueando o acesso ou fora do ar.")
+                return pd.DataFrame()
+        
             if isinstance(df_atv.columns, pd.MultiIndex):
                 df_atv.columns = df_atv.columns.droplevel()
-
+        
             df_atv = df_atv.dropna(how='all')
             df_atv['Papel'] = df_atv['Papel'].astype(str) + '.SA'
             return df_atv
+
+
+        
 
         
         def multiselect_filter(df, col, selected):
