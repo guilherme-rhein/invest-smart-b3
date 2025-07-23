@@ -6,6 +6,7 @@ from io import StringIO
 import requests
 from concurrent.futures import ThreadPoolExecutor
 from io import BytesIO
+import cloudscraper
 
 
 def to_excel_download(df, filename='dados.xlsx'):
