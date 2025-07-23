@@ -32,6 +32,10 @@ def main():
             url = "https://fundamentus.com.br/resultado.php"
             headers = {"User-Agent": "Mozilla/5.0"}
             response = requests.get(url, headers=headers)
+            
+            # Debug: TEST RESP
+            st.write("Status Code da Requisição:", response.status_code)
+            st.code(response.text[:1000], language='html')
 
             df_atv = pd.read_html(StringIO(response.text), decimal=",", thousands=".")[0]
 
