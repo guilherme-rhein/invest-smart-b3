@@ -7,6 +7,7 @@ import requests
 from concurrent.futures import ThreadPoolExecutor
 from io import BytesIO
 import cloudscraper
+import xlsxwriter
 
 
 def to_excel_download(df, filename='dados.xlsx'):
