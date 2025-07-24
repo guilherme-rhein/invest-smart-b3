@@ -1,6 +1,5 @@
-# 📊 Invest Smart B3
-
-An interactive app built with **Streamlit** to analyze and classify B3 stocks based on the **Relative Strength Index (RSI)**, supporting buy and sell decisions with both **technical and fundamental analysis**.
+# 💡 About the Project - Invest Smart B3
+This project was developed to assist in analyzing stocks from the Brazilian stock exchange (B3), combining technical analysis indicators with fundamental data. An interactive app built with **Streamlit** to analyze and classify B3 stocks based on the **Relative Strength Index (RSI)**, supporting buy and sell decisions with both **technical and fundamental analysis**.
 
 ---
 
@@ -36,6 +35,38 @@ An interactive app built with **Streamlit** to analyze and classify B3 stocks ba
 ---
 
 ## ⚙️ How to Use
+### 🚀 Access the Online App
 
+You can use the app directly via the following link:
 
+🔗 [invest-smart-b3.onrender.com](https://invest-smart-b3.onrender.com)
 
+---
+
+### 🖥️ Run Locally
+
+If you prefer, you can download and run the app locally on your machine.
+
+#### 🔧 Steps to run locally:
+
+1. Clone the repository:
+```bash
+git clone https://github.com/guilherme-rhein/invest-smart-b3.git
+```
+
+2. Navigate to the local app folder:
+```bash
+cd invest-smart-b3/Local_Application
+```
+
+3. streamlit run app.py
+```bash
+streamlit run local_app.py
+```
+
+#### 📁 Example Data:
+You can find sample data in the 'Import Data' folder.
+The file can be uploaded directly in the app interface, allowing you to explore and test its features like filtering, visualization, and asset classification.
+
+## 💡 About the Project
+This project was developed to assist in analyzing stocks from the Brazilian stock exchange (B3), combining technical analysis indicators with fundamental data.
