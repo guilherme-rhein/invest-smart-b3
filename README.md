@@ -59,7 +59,7 @@ git clone https://github.com/guilherme-rhein/invest-smart-b3.git
 cd invest-smart-b3/Local_Application
 ```
 
-3. streamlit run app.py
+3. Launch the app using Streamlit:
 ```bash
 streamlit run local_app.py
 ```
