@@ -67,6 +67,3 @@ streamlit run local_app.py
 #### 📁 Example Data:
 You can find sample data in the 'Import Data' folder.
 The file can be uploaded directly in the app interface, allowing you to explore and test its features like filtering, visualization, and asset classification.
-
-## 💡 About the Project
-This project was developed to assist in analyzing stocks from the Brazilian stock exchange (B3), combining technical analysis indicators with fundamental data.
